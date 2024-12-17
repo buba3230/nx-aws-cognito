@@ -1,0 +1,13 @@
+<div class="welcome">
+    <h1>
+      <span> Hello there, </span>
+      Welcome dashboard 👋
+    </h1>
+    @if(authStore.loaded()) {
+      <span>
+        Cognito User Id: {{ authStore.userName() }}
+      </span>
+    } @else {
+      ...LOADING...
+    }
+</div>

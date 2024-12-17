@@ -1,0 +1,27 @@
+<form [formGroup]="loginForm" (ngSubmit)='onSubmit()' class="login-form">
+    <div class="logo">
+        <img src="assets/angular.ico" alt="LOGO" class="img">
+    </div>
+    <hr>
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="string"
+            name="email"
+            id="email"
+            placeholder=""
+            aria-label="String"
+            [formControl]="emailControl"
+        >
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password"
+            name="password"
+            id="password"
+            placeholder=""
+            aria-label="String"
+            [formControl]="passwordControl"
+        >
+    </div>
+    <button type='submit' class="btn-submit" [disabled]='!loginForm.valid'>LOGIN</button>
+</form>

@@ -1,0 +1,4 @@
+<div class="header" *ngIf="showHeader$ | async">
+  <button (click)="logout()">LogOut</button>
+</div>
+<router-outlet></router-outlet>
